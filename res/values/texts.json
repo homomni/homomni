@@ -1,0 +1,11 @@
+{
+  "app_name": "Homomni",
+  "welcome_to": {
+    "fr": "bienvenue sur %s",
+    "en": "welcome to %s"
+  },
+  "home_description": {
+    "fr": "Le site Web de Homomni",
+    "en": "The Homomni Website"
+  }
+}
