@@ -51,11 +51,26 @@ function view (string $name, array $data = []): ?string {
 }
 
 function pathOf(string $name, string $extension = ''): ?string {
-    return is_file($path = __DIR__ . DIRECTORY_SEPARATOR . str_replace('.', DIRECTORY_SEPARATOR, $name) . $extension) ? $path : null;
+    return file_exists($path = __DIR__ . DIRECTORY_SEPARATOR . str_replace('.', DIRECTORY_SEPARATOR, $name) . $extension) ? $path : null;
 }
 
 function send(null|int|string $content = null): void {
     if (!isset($content))
         exit;
     exit($content);
+}
+
+function style(string $name): string {
+    return url("static.$name", '.css');
+}
+
+function script(string $name): string {
+    return url("static.$name", '.js');
+}
+
+function url(string $name, string $extension): ?string {
+    if (!pathOf("cgi.$name", $extension)) {
+        throw new \RuntimeException("Unknown $name ($extension) in " . pathOf('cgi'));
+    }
+    return '/' . str_replace('.', '/', $name) . $extension;
 }
