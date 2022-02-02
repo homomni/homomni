@@ -1,0 +1,24 @@
+{
+    "name": "homomni/homomni",
+    "description": "The Homomni Website",
+    "type": "project",
+    "require": {
+        "php": ">=8.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Homomni\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "SIGUI Kessé Emmanuel",
+            "email": "developer@sikessem.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "php_packages"
+    },
+    "minimum-stability": "dev"
+}
