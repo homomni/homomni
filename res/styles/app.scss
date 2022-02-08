@@ -27,3 +27,14 @@ main {
     border-radius: 4px;
     text-align: center;
 }
+
+.field, .button {
+    font-size: 1rem;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.button {
+    cursor: pointer;
+}
