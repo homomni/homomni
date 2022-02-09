@@ -8,8 +8,11 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Homomni\\": "src/"
-        }
+            "Homomni\\App\\": "app/src/"
+        },
+        "files": [
+            "app/init.php"
+        ]
     },
     "authors": [
         {
@@ -18,7 +21,8 @@
         }
     ],
     "config": {
-        "vendor-dir": "php_packages"
+        "vendor-dir": "php_packages",
+        "web-dir": "render"
     },
     "minimum-stability": "dev"
 }

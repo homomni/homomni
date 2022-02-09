@@ -2,6 +2,10 @@
   AddHandler application/x-httpd-ea-php80___lsphp .php .php8 .phtml
 </IfModule>
 
+<IfModule mod_autoindex.c>
+	Options -Indexes
+</IfModule>
+
 <IfModule mod_rewrite.c>
   # Configure rewrite rules
   Options +FollowSymLinks
@@ -23,6 +27,6 @@
   RewriteCond %{HTTP_HOST} ^www.((?:[^.]+.)+[^.]+)$
   RewriteRule .* https://%1 [L,R=301]
 
-  # Redirect to the public directory
-  RewriteRule (.*) /cgi/$1 [L]
+  # Redirect to the render folder
+  RewriteRule (.*) /render/$1 [L]
 </IfModule>
