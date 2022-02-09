@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "app": "node main.js",
-    "css": "sass ./res/styles/:./cgi/static/ -s compressed --no-source-map"
+    "css": "sass ./app/res/styles/:./render/static/ -s compressed --no-source-map"
   },
   "repository": "https://github.com/homomni/homomni.git",
   "author": "SIGUI Kessé Emmanuel",
